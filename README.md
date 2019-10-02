@@ -63,18 +63,18 @@ Additionally it creates a service with a load balancer.
 
 ### Check the deployment worked
 
-   kubectl get pods
+	 kubectl get pods
 
-	 It should display output like below. We should have one pod installed that
-	 contains our OSGi app.
+It should display output like below. We should have one pod installed that
+contains our OSGi app.
 
 	 NAME                                  READY     STATUS    RESTARTS   AGE
 	 example-kubernetes-6b7985c88f-tcfmh   1/1       Running   0          10h
 
 	 kubectl get services
 
-	 Here we should see a service that makes our example available on an external
-	 ip with a load balancer.
+Here we should see a service that makes our example available on an external
+ip with a load balancer.
 
 	 NAME                 TYPE           CLUSTER-IP    EXTERNAL-IP      PORT(S)          AGE
 	 example-kubernetes   LoadBalancer   10.0.207.16   104.211.55.231   8080:30215/TCP   22h
